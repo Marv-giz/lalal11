@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hey You 💖</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        font-family: "Segoe UI", sans-serif;
+        color: #fff;
+        text-align: center;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 40px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        width: 320px;
+      }
+
+      h1 {
+        font-size: 26px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 25px;
+        line-height: 1.5;
+      }
+
+      button {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .yes {
+        background: #fff;
+        color: #ff4d6d;
+        font-weight: bold;
+      }
+
+      .no {
+        background: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+      }
+
+      .yes:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Hey ❤️</h1>
+      <p>
+        You’ve made me fall in love with you. Everything about you your
+        beautiful face, your voice, and all the little things makes me genuinely
+        happy.
+        <br /><br />
+        Will you be my Valentine and go out with me? 🌹
+      </p>
+
+      <button class="yes" onclick="sayYes()">Yes 💖</button>
+      <button class="no" onmouseover="moveNo(this)">Hmm 🤔</button>
+    </div>
+
+    <script>
+      function sayYes() {
+        document.body.innerHTML = `
+            <h1 style="font-size:40px;">YAY!! 💕🥰</h1>
+            <p style="font-size:20px;">Date confirmed. I can’t wait text me for more info ❤️</p>
+        `;
+      }
+
+      function moveNo(btn) {
+        btn.style.position = "absolute";
+        btn.style.top = Math.random() * 80 + "%";
+        btn.style.left = Math.random() * 80 + "%";
+      }
+    </script>
+  </body>
+</html>
